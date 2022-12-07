@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const student = require("./Routes/Student");
 const Page3Controller = require("./Controllers/Page3_Controller.js");
 const StudentSchema = require("./StudentSchema");
+const cookieParser = require("cookie-parser");
 
 const port = process.env.PORT || 5000;
 const app = express();
@@ -110,7 +111,7 @@ mongoose
 // });
 
 // with Controller
-app.get("/students/all/:id", Page3Controller);
+// app.get("/students/all/:id", Page3Controller);
 
 app.listen(port, () => {
   console.log(`Server is running at Port ${port}`);
